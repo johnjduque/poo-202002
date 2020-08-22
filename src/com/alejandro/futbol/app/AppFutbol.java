@@ -21,7 +21,7 @@ public class AppFutbol {
         mac.posicion = "Creativo";
 
         Jugador cardona = new Jugador();
-        mac.nombre = "Edwin Cardona";
+        mac.nombre = "chicho serna";
         mac.posicion = "Creativo";
 
         EquipoDeFutbol nacional = new EquipoDeFutbol();
