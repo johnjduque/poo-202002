@@ -42,5 +42,18 @@ public class AppFutbol {
         System.out.println("Boca después de comprar: " + boca.jugadores.size());
 
         nacional.mostrarDelanteros();
+
+        Jugador quintana = new Jugador();
+        quintana.nombre = "Quintana";
+        quintana.posicion = "Portero";
+
+        Jugador henriquez = new Jugador();
+        henriquez.nombre = "Charales";
+        henriquez.posicion = "Defensa central";
+
+        nacional.nombre = "Atl. Nacional";
+        ArrayList<Jugador> jugadoresTitulares = new ArrayList<>(Arrays.asList(quintana));
+        ArrayList<Jugador> suplentes = new ArrayList<>(Arrays.asList(henriquez));
+        nacional.formarLaTitular(jugadoresTitulares, suplentes);
     }
 }

@@ -1,5 +1,7 @@
 package com.alejandro.futbol.domain;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 public class EquipoDeFutbol {
@@ -34,5 +36,19 @@ public class EquipoDeFutbol {
                 System.out.println(jugador.nombre);
             }
         });
+    }
+
+    public void prestarJugador(Jugador jugador, long precio, EquipoDeFutbol destino, byte tiempoDePrestamo, String opcionDeCompra){
+        this.jugadores.remove(jugador);
+        destino.jugadores.add(jugador);
+    }
+
+    public void cederJugador(Jugador jugador, EquipoDeFutbol destino,byte tiempoDePrestamo){
+        this.jugadores.remove(jugador);
+        destino.jugadores.add(jugador);
+    }
+
+    public void formarLaTitular(ArrayList<Jugador> jugadoresTitulares, ArrayList<Jugador> suplentes){
+        System.out.println(nombre + " presenta su lista de titulares " + jugadoresTitulares + " y la de suplentes " + suplentes);
     }
 }
