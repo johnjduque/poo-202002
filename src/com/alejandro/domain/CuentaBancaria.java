@@ -10,6 +10,15 @@ public class CuentaBancaria {
     public char tipoCuenta; // A ó C
     public Date fechaDeCreacion;
 
+    public CuentaBancaria(Banco banco, String numero, Persona propietario, float saldo, char tipoCuenta, Date fechaDeCreacion) {
+        this.banco = banco;
+        this.numero = numero;
+        this.propietario = propietario;
+        this.saldo = saldo;
+        this.tipoCuenta = tipoCuenta;
+        this.fechaDeCreacion = new Date();
+    }
+
     public boolean retirar(float valorARetirar) {
         if (saldo > valorARetirar) {
             saldo -= valorARetirar;

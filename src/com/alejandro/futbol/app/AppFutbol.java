@@ -8,21 +8,13 @@ import java.util.Arrays;
 
 public class AppFutbol {
     public static void main(String[] args) {
-        Jugador duque = new Jugador();
-        duque.nombre = "Jefferson Duque";
-        duque.posicion = "Delantero";
+        Jugador duque = new Jugador("Jefferson Duque", "Delantero");
 
-        Jugador aristi = new Jugador();
-        aristi.nombre = "Victor Aristizabal";
-        aristi.posicion = "DELANTERO";
+        Jugador aristi = new Jugador("Victor Aristizabal", "DELANTERO");
 
-        Jugador mac = new Jugador();
-        mac.nombre = "Macnelly Torres";
-        mac.posicion = "Creativo";
+        Jugador mac = new Jugador("Macnelly Torres", "Creativo");
 
-        Jugador cardona = new Jugador();
-        mac.nombre = "chicho serna";
-        mac.posicion = "Creativo";
+        Jugador cardona = new Jugador("chicho serna", "Creativo");
 
         EquipoDeFutbol nacional = new EquipoDeFutbol();
         nacional.nombre = "Atl. Nacional";
@@ -43,17 +35,12 @@ public class AppFutbol {
 
         nacional.mostrarDelanteros();
 
-        Jugador quintana = new Jugador();
-        quintana.nombre = "Quintana";
-        quintana.posicion = "Portero";
+        Jugador quintana = new Jugador("Quintana", "Portero");
 
-        Jugador henriquez = new Jugador();
-        henriquez.nombre = "Charales";
-        henriquez.posicion = "Defensa central";
+        Jugador henriquez = new Jugador("Charales", "Defensa central");
 
         nacional.nombre = "Atl. Nacional";
-        ArrayList<Jugador> jugadoresTitulares = new ArrayList<>(Arrays.asList(quintana));
-        ArrayList<Jugador> suplentes = new ArrayList<>(Arrays.asList(henriquez));
-        nacional.formarLaTitular(jugadoresTitulares, suplentes);
+        ArrayList<Jugador> jugadoresTitulares = new ArrayList<>(Arrays.asList(quintana, henriquez));
+        nacional.formarLaTitular(jugadoresTitulares);
     }
 }

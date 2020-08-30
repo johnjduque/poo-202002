@@ -5,4 +5,9 @@ public class Jugador {
     public byte edad;
     public byte nroCamiseta;
     public String posicion;
+
+    public Jugador(String nombre, String posicion) {
+        this.nombre = nombre;
+        this.posicion = posicion;
+    }
 }

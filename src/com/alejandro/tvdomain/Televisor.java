@@ -8,6 +8,12 @@ public class Televisor {
     public byte volumen;
     public boolean prendido;
 
+    public Televisor(String serial, String marca, boolean prendido) {
+        this.serial = serial;
+        this.marca = marca;
+        this.prendido = prendido;
+    }
+
     public void prender() {
         prendido = true;
     }

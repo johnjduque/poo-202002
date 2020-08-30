@@ -23,17 +23,11 @@ public class AppTelevisores {
 
         // TODO Explorar todo lo que tenga Televisor y jugar con la clase ArrayList
 
-        Televisor tv = new Televisor();
-        tv.marca = "Samsung";
-        tv.prender();
+        Televisor tv = new Televisor("123", "Samsung", false );
 
-        Televisor tv2 = new Televisor();
-        tv2.marca = "Sony";
-        tv2.prender();
+        Televisor tv2 = new Televisor("456", "Kalley", true );
 
-        Televisor tv3 = new Televisor();
-        tv3.marca = "Challenger";
-        tv3.apagar();
+        Televisor tv3 = new Televisor("789", "LG", false);
 
         ArrayList<Televisor> televisores = new ArrayList<>();
         televisores.add(tv);
@@ -42,7 +36,12 @@ public class AppTelevisores {
 
         televisores.forEach(televisor -> {
             // TODO Reemplazar el boolean por el texto en cuestión "Apagado" ó "Prendido"
-            System.out.println(televisor.marca + " está " + televisor.prendido);
+            if (televisor.prendido){
+                System.out.println(televisor.marca + " está Prendido");
+            }
+            else {
+                System.out.println(televisor.marca + " está Apagado");
+            }
         });
 
     }

@@ -1,6 +1,5 @@
 package com.alejandro.futbol.domain;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,7 +47,11 @@ public class EquipoDeFutbol {
         destino.jugadores.add(jugador);
     }
 
-    public void formarLaTitular(ArrayList<Jugador> jugadoresTitulares, ArrayList<Jugador> suplentes){
-        System.out.println(nombre + " presenta su lista de titulares " + jugadoresTitulares + " y la de suplentes " + suplentes);
+    public void formarLaTitular(ArrayList<Jugador> jugadoresTitulares){
+        jugadoresTitulares.forEach(jugador -> {
+            System.out.println(nombre + " presenta su lista de titulares " + jugador.nombre);
+        });
+
     }
+
 }

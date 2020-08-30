@@ -1,16 +1,21 @@
 package com.alejandro.app;
 
+import com.alejandro.domain.Banco;
 import com.alejandro.domain.CuentaBancaria;
 import com.alejandro.domain.Persona;
 
+import java.util.Date;
+
 public class App {
     public static void main(String[] args) {
-        Persona alejandro = new Persona();
-
+        Persona alejandro = new Persona(1234, "alejandro", 'M', 321456, "j@uco" );
+        
+        Banco banco1 = new Banco("Bancolombia");
+        
         alejandro.nombre = "Alejandro Ramírez";
 
-        CuentaBancaria cuentaDeAlejo = new CuentaBancaria();
-        CuentaBancaria otraCuenta = new CuentaBancaria();
+        CuentaBancaria cuentaDeAlejo = new CuentaBancaria(banco1, "12345", alejandro, 100000, 'A',new Date());
+        CuentaBancaria otraCuenta = new CuentaBancaria(banco1, "1256", alejandro, 50000, 'C', new Date());
 
         cuentaDeAlejo.tipoCuenta = 'A';
         cuentaDeAlejo.numero = "1235";

@@ -5,4 +5,8 @@ public class Banco {
     public long nit;
     public String gerente;
     public String ubicacion;
+
+    public Banco(String nombre) {
+        this.nombre = nombre;
+    }
 }
